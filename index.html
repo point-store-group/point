@@ -3,9 +3,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>point. Advertising & Gift Store</title>
+  <title>Point Store | Advertising & Gift Store</title>
   
-  <!-- خطوط عربية ولاتينية حديثة -->
+  <!-- خطوط عربية وتصميمية حديثة -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;800;900&family=Tajawal:wght@500;700;900&display=swap" rel="stylesheet">
@@ -15,15 +15,13 @@
   
   <style>
     :root {
-      --bg-dark: #12071d;
-      --bg-purple: #230d38;
+      --bg-main: #f8f9fa;
       --point-purple: #341553;
       --point-orange: #ff5e15;
-      --point-orange-glow: rgba(255, 94, 21, 0.4);
-      --card-bg: rgba(255, 255, 255, 0.06);
-      --card-border: rgba(255, 255, 255, 0.12);
-      --text-white: #ffffff;
-      --text-muted: #c9b8db;
+      --card-bg: #ffffff;
+      --card-border: #eaeaea;
+      --text-dark: #222222;
+      --text-muted: #666666;
     }
 
     * {
@@ -34,47 +32,54 @@
     }
 
     body {
-      background: radial-gradient(circle at 50% 20%, var(--bg-purple) 0%, var(--bg-dark) 75%);
-      color: var(--text-white);
+      background-color: var(--bg-main);
+      color: var(--text-dark);
       min-height: 100vh;
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding: 35px 16px 25px;
+      padding: 40px 16px 20px;
     }
 
     /* رأس الصفحة وهوية point */
     .brand-card {
       text-align: center;
-      margin-bottom: 25px;
+      margin-bottom: 30px;
       display: flex;
       flex-direction: column;
       align-items: center;
     }
 
-    /* رسم اللوجو الأصلي بدقة الفيكتور */
+    /* حاوية اللوجو الرسمية */
     .logo-container {
-      width: 105px;
-      height: 105px;
-      background: rgba(255, 255, 255, 0.05);
-      border: 2px solid rgba(255, 94, 21, 0.3);
+      width: 120px;
+      height: 120px;
+      background: #ffffff;
+      border: 2px solid #f0f0f0;
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
-      margin-bottom: 14px;
-      box-shadow: 0 8px 25px var(--point-orange-glow);
-      backdrop-filter: blur(10px);
+      margin-bottom: 16px;
+      box-shadow: 0 5px 20px rgba(52, 21, 83, 0.08);
+      overflow: hidden;
+      padding: 15px;
+    }
+
+    .logo-img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
     }
 
     .brand-title {
       font-family: 'Outfit', sans-serif;
-      font-size: 38px;
+      font-size: 40px;
       font-weight: 900;
       letter-spacing: -1px;
-      color: var(--text-white);
+      color: var(--point-purple);
       line-height: 1;
-      margin-bottom: 6px;
+      margin-bottom: 4px;
     }
 
     .brand-title span {
@@ -83,12 +88,12 @@
 
     .brand-subtitle {
       font-family: 'Outfit', sans-serif;
-      font-size: 14px;
+      font-size: 13px;
       font-weight: 700;
-      color: var(--point-orange);
-      letter-spacing: 2px;
+      color: var(--point-purple);
+      letter-spacing: 2.5px;
       text-transform: uppercase;
-      margin-bottom: 6px;
+      margin-bottom: 8px;
     }
 
     .brand-desc {
@@ -103,7 +108,7 @@
       max-width: 420px;
       display: flex;
       flex-direction: column;
-      gap: 13px;
+      gap: 14px;
     }
 
     /* صف الأزرار السريعة: واتساب + اتصال */
@@ -119,33 +124,28 @@
       justify-content: center;
       gap: 10px;
       padding: 15px 12px;
-      border-radius: 16px;
+      border-radius: 14px;
       text-decoration: none;
-      color: var(--text-white);
+      color: var(--text-dark);
       font-weight: 700;
       font-size: 15px;
       background: var(--card-bg);
       border: 1px solid var(--card-border);
-      backdrop-filter: blur(10px);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.03);
       transition: all 0.25s ease;
     }
 
     .btn-quick:active, .btn-quick:hover {
       transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+      box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+      border-color: #ddd;
     }
 
-    .btn-quick.whatsapp {
-      border-bottom: 4px solid #25D366;
-    }
     .btn-quick.whatsapp i {
       color: #25D366;
       font-size: 22px;
     }
 
-    .btn-quick.call {
-      border-bottom: 4px solid var(--point-orange);
-    }
     .btn-quick.call i {
       color: var(--point-orange);
       font-size: 20px;
@@ -156,22 +156,22 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 15px 20px;
-      border-radius: 16px;
+      padding: 16px 20px;
+      border-radius: 14px;
       text-decoration: none;
-      color: var(--text-white);
+      color: var(--text-dark);
       font-weight: 700;
       font-size: 15px;
       background: var(--card-bg);
       border: 1px solid var(--card-border);
-      backdrop-filter: blur(10px);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.03);
       transition: all 0.25s ease;
     }
 
     .link-row:active, .link-row:hover {
       transform: translateY(-2px);
-      background: rgba(255, 255, 255, 0.1);
-      box-shadow: 0 6px 20px rgba(0,0,0,0.35);
+      box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+      border-color: #ddd;
     }
 
     .row-content {
@@ -181,45 +181,40 @@
     }
 
     .row-content i {
-      font-size: 22px;
+      font-size: 20px;
       width: 26px;
       text-align: center;
     }
 
     .chevron {
-      font-size: 13px;
-      color: var(--text-muted);
+      font-size: 12px;
+      color: #aaa;
     }
 
-    /* تمييز هويات الأزرار */
-    .btn-catalog { border-right: 5px solid var(--point-orange); }
-    .btn-catalog i { color: var(--point-orange); }
-
-    .btn-facebook { border-right: 5px solid #1877F2; }
+    /* تخصيص أيقونات القائمة بألوان الهوية */
+    .btn-website i { color: var(--point-purple); }
+    .btn-whatsapp i { color: #25D366; }
     .btn-facebook i { color: #1877F2; }
-
-    .btn-instagram { border-right: 5px solid #E1306C; }
     .btn-instagram i { color: #E1306C; }
-
-    .btn-maps { border-right: 5px solid #EA4335; }
     .btn-maps i { color: #EA4335; }
 
     /* نبذة عن الخدمات */
     .services-badge {
-      background: rgba(255, 94, 21, 0.08);
-      border: 1px dashed rgba(255, 94, 21, 0.35);
+      background: rgba(255, 94, 21, 0.05);
+      border: 1px dashed rgba(255, 94, 21, 0.3);
       border-radius: 14px;
       padding: 14px 18px;
       text-align: center;
       font-size: 13px;
-      color: #ffd8c4;
+      color: #b53e00;
       line-height: 1.6;
       margin-top: 5px;
+      font-weight: 600;
     }
 
     .footer {
       margin-top: auto;
-      padding-top: 25px;
+      padding-top: 30px;
       font-size: 12px;
       color: var(--text-muted);
       text-align: center;
@@ -228,47 +223,39 @@
 </head>
 <body>
 
-  <!-- قسم اللوجو والبراند -->
+  <!-- قسم اللوجو والبراند الرسمي -->
   <div class="brand-card">
     <div class="logo-container">
-      <!-- رسم اللوجو الأصلي: الحلقة البنفسجية والقطعة البرتقالية -->
-      <svg viewBox="0 0 100 100" width="65" height="65">
-        <!-- القطعة العلوية الدائرية (البنفسجي الغامق) -->
-        <path d="M 50 15 A 35 35 0 1 1 20 62 L 35 55 A 20 20 0 1 0 50 30 A 20 20 0 0 0 35 37 L 22 27 A 35 35 0 0 1 50 15 Z" fill="#d9b6ff"/>
-        <!-- القطعة المثلثية المنحنية (البرتقالي الصريح) -->
-        <path d="M 20 66 A 35 35 0 0 1 18 55 L 36 55 A 20 20 0 0 0 37 60 Z" fill="#ff5e15"/>
-        <path d="M 18 58 L 42 77 A 4 4 0 0 1 36 82 L 20 66 Z" fill="#ff5e15"/>
-      </svg>
+      <!-- ضع صورة اللوجو باسم logo.png في نفس المجلد -->
+      <img src="logo.png" alt="Point Store Logo" class="logo-img" onerror="this.onerror=null; this.src='https://via.placeholder.com/150/341553/ffffff?text=point.';">
     </div>
     
     <h1 class="brand-title">point<span>.</span></h1>
     <div class="brand-subtitle">Advertising & Gift Store</div>
-    <p class="brand-desc">للدعاية والإعلان والطباعة وهدايا الشركات</p>
+    <p class="brand-desc">المنصورة • الدقهلية • مصر</p>
   </div>
 
   <!-- قائمة الروابط -->
   <div class="links-wrapper">
 
-    <!-- 1. أزرار التواصل المباشر (جنباً إلى جنب) -->
+    <!-- 1. أزرار التواصل المباشر (استفسارات وشكاوى بناءً على بيانات الموقع) -->
     <div class="quick-row">
-      <!-- زر الواتساب -->
-      <a href="https://wa.me/201023010934" class="btn-quick whatsapp" target="_blank">
+      <a href="https://wa.me/201556712331" class="btn-quick whatsapp" target="_blank">
         <i class="fa-brands fa-whatsapp"></i>
         <span>واتساب</span>
       </a>
 
-      <!-- زر الاتصال الهاتفي السريع -->
-      <a href="tel:01023010934" class="btn-quick call">
+      <a href="tel:01556712331" class="btn-quick call">
         <i class="fa-solid fa-phone"></i>
         <span>اتصال</span>
       </a>
     </div>
 
-    <!-- 2. كتالوج الهدايا والمنتجات -->
-    <a href="https://wa.me/c/201023010934" class="link-row btn-catalog" target="_blank">
+    <!-- 2. زيارة الموقع الرسمي للمتجر -->
+    <a href="https://point-store.com/" class="link-row btn-website" target="_blank">
       <div class="row-content">
-        <i class="fa-solid fa-gift"></i>
-        <span>كتالوج الهدايا والطباعة</span>
+        <i class="fa-solid fa-globe"></i>
+        <span>زيارة المتجر الإلكتروني</span>
       </div>
       <i class="fa-solid fa-chevron-left chevron"></i>
     </a>
@@ -291,24 +278,24 @@
       <i class="fa-solid fa-chevron-left chevron"></i>
     </a>
 
-    <!-- 5. موقع المعرض / المحل (خرائط جوجل) -->
+    <!-- 5. موقع المعرض على الخريطة -->
     <a href="https://maps.google.com" class="link-row btn-maps" target="_blank">
       <div class="row-content">
         <i class="fa-solid fa-location-dot"></i>
-        <span>موقع المعرض على الخريطة</span>
+        <span>موقع المعرض (المنصورة)</span>
       </div>
       <i class="fa-solid fa-chevron-left chevron"></i>
     </a>
 
-    <!-- نبذة عن التخصص والخدمات -->
+    <!-- خدمات المتجر المستخرجة من الموقع -->
     <div class="services-badge">
-      ✨ طباعة لافتات • يونيفورم وكابات • دروع وتكريمات • أكياس ومطبوعات ورقية • هدايا دعائية ومكتبية
+      ✨ طباعة بجميع أنواعها • دروع التكريم • ورقيات الشركات • الحفر والطباعة على الخامات • تصميمات احترافية
     </div>
 
   </div>
 
   <div class="footer">
-    © point. Advertising & Gift Store — جميع الحقوق محفوظة
+    © 2026 Point Store — جميع الحقوق محفوظة
   </div>
 
 </body>
