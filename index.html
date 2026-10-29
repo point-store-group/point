@@ -56,18 +56,18 @@
       align-items: center;
     }
 
-    /* حاوية اللوجو الدائرية مع تأثير إطار متناسق */
+    /* حاوية اللوجو الدائرية مع إطار بنفسجي أنيق */
     .logo-container {
-      width: 120px;
-      height: 120px;
+      width: 125px;
+      height: 125px;
       background: #ffffff;
-      border: 3px solid rgba(52, 21, 83, 0.1);
+      border: 3.5px solid var(--point-purple);
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
       margin-bottom: 16px;
-      box-shadow: 0 8px 25px rgba(52, 21, 83, 0.1);
+      box-shadow: 0 8px 25px rgba(52, 21, 83, 0.15);
       overflow: hidden;
       padding: 10px;
       transition: transform 0.3s ease;
@@ -91,10 +91,7 @@
       color: var(--point-purple);
       line-height: 1;
       margin-bottom: 4px;
-    }
-
-    .brand-title span {
-      color: var(--point-orange);
+      display: none; /* تم إخفاء العنوان المتكرر لاعتماد اللوجو كصورة أساسية متكاملة */
     }
 
     .brand-subtitle {
@@ -105,6 +102,7 @@
       letter-spacing: 2px;
       text-transform: uppercase;
       margin-bottom: 6px;
+      display: none;
     }
 
     /* شارة حالة العمل / الموقع */
@@ -114,11 +112,11 @@
       gap: 6px;
       background: #eef9f2;
       color: #1f8a4c;
-      padding: 4px 12px;
+      padding: 5px 14px;
       border-radius: 20px;
-      font-size: 11px;
+      font-size: 12px;
       font-weight: 700;
-      margin-top: 6px;
+      margin-top: 5px;
       border: 1px solid rgba(31, 138, 76, 0.15);
     }
 
@@ -143,6 +141,7 @@
       display: flex;
       flex-direction: column;
       gap: 12px;
+      margin-top: 10px;
     }
 
     /* صف الأزرار السريعة: واتساب + اتصال */
@@ -257,9 +256,6 @@
       <img src="POINT LOGO0.png" alt="Point Store Logo" class="logo-img" onerror="this.onerror=null; this.src='https://via.placeholder.com/150/341553/ffffff?text=point.';">
     </div>
     
-    <h1 class="brand-title">point<span>.</span></h1>
-    <div class="brand-subtitle">Advertising & Gift Store</div>
-    
     <!-- مؤشر الحالة الاحترافي -->
     <div class="status-badge">
       <span class="status-dot"></span>
@@ -293,7 +289,7 @@
     </a>
 
     <!-- 3. صفحة فيسبوك -->
-    <a href="https://www.facebook.com" class="link-row btn-facebook" target="_blank">
+    <a href="https://www.facebook.com/profile.php?id=61578371426405" class="link-row btn-facebook" target="_blank">
       <div class="row-content">
         <i class="fa-brands fa-facebook-f"></i>
         <span>صفحتنا على فيسبوك</span>
@@ -302,7 +298,7 @@
     </a>
 
     <!-- 4. حساب إنستغرام -->
-    <a href="https://www.instagram.com" class="link-row btn-instagram" target="_blank">
+    <a href="https://www.instagram.com/stories/point_store.eg/" class="link-row btn-instagram" target="_blank">
       <div class="row-content">
         <i class="fa-brands fa-instagram"></i>
         <span>تابعنا على إنستغرام</span>
