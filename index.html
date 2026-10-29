@@ -5,10 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Point Store | Advertising & Gift Store</title>
   
-  <!-- خطوط عربية وتصميمية حديثة -->
+  <!-- خط Cairo الحديث -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;800;900&family=Tajawal:wght@500;700;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&family=Outfit:wght@600;800;900&display=swap" rel="stylesheet">
   
   <!-- مكتبة الأيقونات Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -28,7 +28,7 @@
       box-sizing: border-box;
       margin: 0;
       padding: 0;
-      font-family: 'Tajawal', sans-serif;
+      font-family: 'Cairo', sans-serif;
     }
 
     body {
@@ -50,7 +50,7 @@
       align-items: center;
     }
 
-    /* حاوية اللوجو الرسمية */
+    /* حاوية اللوجو الدائرية */
     .logo-container {
       width: 120px;
       height: 120px;
@@ -63,7 +63,7 @@
       margin-bottom: 16px;
       box-shadow: 0 5px 20px rgba(52, 21, 83, 0.08);
       overflow: hidden;
-      padding: 15px;
+      padding: 12px;
     }
 
     .logo-img {
@@ -73,8 +73,8 @@
     }
 
     .brand-title {
-      font-family: 'Outfit', sans-serif;
-      font-size: 40px;
+      font-family: 'Outfit', 'Cairo', sans-serif;
+      font-size: 42px;
       font-weight: 900;
       letter-spacing: -1px;
       color: var(--point-purple);
@@ -87,11 +87,11 @@
     }
 
     .brand-subtitle {
-      font-family: 'Outfit', sans-serif;
+      font-family: 'Outfit', 'Cairo', sans-serif;
       font-size: 13px;
       font-weight: 700;
       color: var(--point-purple);
-      letter-spacing: 2.5px;
+      letter-spacing: 2px;
       text-transform: uppercase;
       margin-bottom: 8px;
     }
@@ -99,7 +99,7 @@
     .brand-desc {
       font-size: 13px;
       color: var(--text-muted);
-      font-weight: 500;
+      font-weight: 600;
     }
 
     /* حاوية الروابط */
@@ -191,112 +191,15 @@
       color: #aaa;
     }
 
-    /* تخصيص أيقونات القائمة بألوان الهوية */
+    /* ألوان الأيقونات */
     .btn-website i { color: var(--point-purple); }
     .btn-whatsapp i { color: #25D366; }
     .btn-facebook i { color: #1877F2; }
     .btn-instagram i { color: #E1306C; }
     .btn-maps i { color: #EA4335; }
 
-    /* نبذة عن الخدمات */
+    /* نبذة عن الخدمات المستخرجة من الموقع */
     .services-badge {
       background: rgba(255, 94, 21, 0.05);
       border: 1px dashed rgba(255, 94, 21, 0.3);
-      border-radius: 14px;
-      padding: 14px 18px;
-      text-align: center;
-      font-size: 13px;
-      color: #b53e00;
-      line-height: 1.6;
-      margin-top: 5px;
-      font-weight: 600;
-    }
-
-    .footer {
-      margin-top: auto;
-      padding-top: 30px;
-      font-size: 12px;
-      color: var(--text-muted);
-      text-align: center;
-    }
-  </style>
-</head>
-<body>
-
-  <!-- قسم اللوجو والبراند الرسمي -->
-  <div class="brand-card">
-    <div class="logo-container">
-      <!-- ضع صورة اللوجو باسم logo.png في نفس المجلد -->
-      <img src="logo.png" alt="Point Store Logo" class="logo-img" onerror="this.onerror=null; this.src='https://via.placeholder.com/150/341553/ffffff?text=point.';">
-    </div>
-    
-    <h1 class="brand-title">point<span>.</span></h1>
-    <div class="brand-subtitle">Advertising & Gift Store</div>
-    <p class="brand-desc">المنصورة • الدقهلية • مصر</p>
-  </div>
-
-  <!-- قائمة الروابط -->
-  <div class="links-wrapper">
-
-    <!-- 1. أزرار التواصل المباشر (استفسارات وشكاوى بناءً على بيانات الموقع) -->
-    <div class="quick-row">
-      <a href="https://wa.me/201556712331" class="btn-quick whatsapp" target="_blank">
-        <i class="fa-brands fa-whatsapp"></i>
-        <span>واتساب</span>
-      </a>
-
-      <a href="tel:01556712331" class="btn-quick call">
-        <i class="fa-solid fa-phone"></i>
-        <span>اتصال</span>
-      </a>
-    </div>
-
-    <!-- 2. زيارة الموقع الرسمي للمتجر -->
-    <a href="https://point-store.com/" class="link-row btn-website" target="_blank">
-      <div class="row-content">
-        <i class="fa-solid fa-globe"></i>
-        <span>زيارة المتجر الإلكتروني</span>
-      </div>
-      <i class="fa-solid fa-chevron-left chevron"></i>
-    </a>
-
-    <!-- 3. صفحة فيسبوك -->
-    <a href="https://www.facebook.com" class="link-row btn-facebook" target="_blank">
-      <div class="row-content">
-        <i class="fa-brands fa-facebook-f"></i>
-        <span>صفحتنا على فيسبوك</span>
-      </div>
-      <i class="fa-solid fa-chevron-left chevron"></i>
-    </a>
-
-    <!-- 4. حساب إنستغرام -->
-    <a href="https://www.instagram.com" class="link-row btn-instagram" target="_blank">
-      <div class="row-content">
-        <i class="fa-brands fa-instagram"></i>
-        <span>تابعنا على إنستغرام</span>
-      </div>
-      <i class="fa-solid fa-chevron-left chevron"></i>
-    </a>
-
-    <!-- 5. موقع المعرض على الخريطة -->
-    <a href="https://maps.google.com" class="link-row btn-maps" target="_blank">
-      <div class="row-content">
-        <i class="fa-solid fa-location-dot"></i>
-        <span>موقع المعرض (المنصورة)</span>
-      </div>
-      <i class="fa-solid fa-chevron-left chevron"></i>
-    </a>
-
-    <!-- خدمات المتجر المستخرجة من الموقع -->
-    <div class="services-badge">
-      ✨ طباعة بجميع أنواعها • دروع التكريم • ورقيات الشركات • الحفر والطباعة على الخامات • تصميمات احترافية
-    </div>
-
-  </div>
-
-  <div class="footer">
-    © 2026 Point Store — جميع الحقوق محفوظة
-  </div>
-
-</body>
-</html>
+      border-
