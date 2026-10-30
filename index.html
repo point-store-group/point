@@ -15,13 +15,13 @@
   
   <style>
     :root {
-      --bg-main: #f8f9fa;
+      --bg-main: #fbfbfd;
       --point-purple: #341553;
       --point-orange: #ff5e15;
       --card-bg: #ffffff;
-      --card-border: #eaeaea;
-      --text-dark: #222222;
-      --text-muted: #666666;
+      --card-border: #edebe9;
+      --text-dark: #1a1a1a;
+      --text-muted: #707070;
     }
 
     * {
@@ -38,49 +38,88 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding: 35px 16px 20px;
-      animation: fadeIn 0.5s ease-in-out;
+      padding: 40px 16px 30px;
+      animation: fadeIn 0.6s ease-in-out;
     }
 
     @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(10px); }
+      from { opacity: 0; transform: translateY(8px); }
       to { opacity: 1; transform: translateY(0); }
     }
 
-    /* رأس الصفحة وهوية point */
+    /* رأس الصفحة وهوية point الكلاسيكية */
     .brand-card {
       text-align: center;
-      margin-bottom: 25px;
+      margin-bottom: 18px;
       display: flex;
       flex-direction: column;
       align-items: center;
     }
 
-    /* حاوية اللوجو الدائرية مع إطار بنفسجي متناسق */
+    /* حاوية اللوجو الدائرية بإطار كلاسيكي أنيق */
     .logo-container {
-      width: 125px;
-      height: 125px;
+      width: 130px;
+      height: 130px;
       background: #ffffff;
-      border: 3.5px solid var(--point-purple);
+      border: 3px solid var(--point-purple);
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
-      margin-bottom: 10px;
-      box-shadow: 0 8px 25px rgba(52, 21, 83, 0.15);
+      margin-bottom: 12px;
+      box-shadow: 0 10px 30px rgba(52, 21, 83, 0.12);
       overflow: hidden;
-      padding: 10px;
+      padding: 12px;
       transition: transform 0.3s ease;
     }
 
     .logo-container:hover {
-      transform: scale(1.03);
+      transform: scale(1.02);
     }
 
     .logo-img {
       width: 100%;
       height: 100%;
       object-fit: contain;
+    }
+
+    /* صندوق المتابعة الكلاسيكي البارز في الأعلى (عربي و إنجليزي) */
+    .top-follow-section {
+      text-align: center;
+      margin-bottom: 22px;
+      width: 100%;
+      max-width: 420px;
+      padding: 18px 20px;
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 16px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+    }
+
+    .top-follow-title {
+      font-family: 'Outfit', 'Cairo', sans-serif;
+      font-size: 13px;
+      font-weight: 800;
+      color: var(--point-orange);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 6px;
+    }
+
+    .top-brand-main {
+      font-family: 'Outfit', 'Cairo', sans-serif;
+      font-size: 21px;
+      font-weight: 900;
+      color: var(--point-purple);
+      line-height: 1.2;
+      margin-bottom: 3px;
+    }
+
+    .top-brand-sub {
+      font-family: 'Outfit', 'Cairo', sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--text-muted);
     }
 
     /* حاوية الروابط */
@@ -130,7 +169,7 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 15px 18px;
+      padding: 16px 20px;
       border-radius: 14px;
       text-decoration: none;
       color: var(--text-dark);
@@ -162,33 +201,19 @@
 
     .chevron {
       font-size: 11px;
-      color: #bbb;
+      color: #ccc;
     }
 
-    /* ألوان الأيقونات */
+    /* ألوان الأيقونات الاحترافية */
     .btn-website i { color: var(--point-purple); }
     .btn-whatsapp i { color: #25D366; }
     .btn-facebook i { color: #1877F2; }
     .btn-instagram i { color: #E1306C; }
-    .btn-maps i { color: #EA4335; }
-
-    /* نبذة عن الخدمات */
-    .services-badge {
-      background: rgba(255, 94, 21, 0.04);
-      border: 1px dashed rgba(255, 94, 21, 0.25);
-      border-radius: 14px;
-      padding: 14px 16px;
-      text-align: center;
-      font-size: 12.5px;
-      color: #b53e00;
-      line-height: 1.6;
-      margin-top: 4px;
-      font-weight: 700;
-    }
+    .btn-maps i { color: var(--point-orange); }
 
     .footer {
       margin-top: auto;
-      padding-top: 25px;
+      padding-top: 30px;
       font-size: 11.5px;
       color: var(--text-muted);
       text-align: center;
@@ -205,7 +230,14 @@
     </div>
   </div>
 
-  <!-- قائمة الروابط -->
+  <!-- صندوق المتابعة الكلاسيكي البارز في الأعلى (عربي وإنجليزي) -->
+  <div class="top-follow-section">
+    <div class="top-follow-title">✨ تابعنا • Follow Us ✨</div>
+    <div class="top-brand-main">Point Store</div>
+    <div class="top-brand-sub">Your Brand’s Turning Point</div>
+  </div>
+
+  <!-- قائمة الروابط بالترتيب المطلوب -->
   <div class="links-wrapper">
 
     <!-- 1. أزرار التواصل المباشر -->
@@ -221,7 +253,34 @@
       </a>
     </div>
 
-    <!-- 2. زيارة الموقع الرسمي للمتجر -->
+    <!-- 2. صفحة فيسبوك -->
+    <a href="https://www.facebook.com/profile.php?id=61578371426405" class="link-row btn-facebook" target="_blank">
+      <div class="row-content">
+        <i class="fa-brands fa-facebook-f"></i>
+        <span>Point Store</span>
+      </div>
+      <i class="fa-solid fa-chevron-left chevron"></i>
+    </a>
+
+    <!-- 3. حساب إنستغرام -->
+    <a href="https://www.instagram.com/stories/point_store.eg/" class="link-row btn-instagram" target="_blank">
+      <div class="row-content">
+        <i class="fa-brands fa-instagram"></i>
+        <span>point-store.eg</span>
+      </div>
+      <i class="fa-solid fa-chevron-left chevron"></i>
+    </a>
+
+    <!-- 4. موقع المؤسسة (GPS) -->
+    <a href="https://maps.app.goo.gl/onkFQgFsgNDiwV6D8" class="link-row btn-maps" target="_blank">
+      <div class="row-content">
+        <i class="fa-solid fa-location-dot"></i>
+        <span>موقع المؤسسة</span>
+      </div>
+      <i class="fa-solid fa-chevron-left chevron"></i>
+    </a>
+
+    <!-- 5. زيارة الموقع الرسمي للمتجر -->
     <a href="https://point-store.com/" class="link-row btn-website" target="_blank">
       <div class="row-content">
         <i class="fa-solid fa-globe"></i>
@@ -229,38 +288,6 @@
       </div>
       <i class="fa-solid fa-chevron-left chevron"></i>
     </a>
-
-    <!-- 3. صفحة فيسبوك -->
-    <a href="https://www.facebook.com/profile.php?id=61578371426405" class="link-row btn-facebook" target="_blank">
-      <div class="row-content">
-        <i class="fa-brands fa-facebook-f"></i>
-        <span>point.</span>
-      </div>
-      <i class="fa-solid fa-chevron-left chevron"></i>
-    </a>
-
-    <!-- 4. حساب إنستغرام -->
-    <a href="https://www.instagram.com/stories/point_store.eg/" class="link-row btn-instagram" target="_blank">
-      <div class="row-content">
-        <i class="fa-brands fa-instagram"></i>
-        <span>point.</span>
-      </div>
-      <i class="fa-solid fa-chevron-left chevron"></i>
-    </a>
-
-    <!-- 5. موقع المعرض على الخريطة -->
-    <a href="https://maps.google.com" class="link-row btn-maps" target="_blank">
-      <div class="row-content">
-        <i class="fa-solid fa-location-dot"></i>
-        <span>موقع المعرض (المنصورة)</span>
-      </div>
-      <i class="fa-solid fa-chevron-left chevron"></i>
-    </a>
-
-    <!-- خدمات المتجر -->
-    <div class="services-badge">
-      ✨ طباعة بجميع أنواعها • دروع التكريم • ورقيات الشركات • الحفر والطباعة على الخامات • تصميمات احترافية
-    </div>
 
   </div>
 
